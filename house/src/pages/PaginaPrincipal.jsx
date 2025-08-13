@@ -2,12 +2,21 @@ import React, { useState } from "react";
 import Caixacomodo from "../components/Caixacomodo.jsx";
 import Painel from "../components/Painel.jsx";
 import BotaoTroca from "../components/landd/BotaoTroca.jsx";
+import MqttConnector from "../components/MqttConnector.jsx";
+
 
 const PaginaPrincipal = () => {
   const [isLight, setIsLight] = useState(true);
 
   const troca = () => {
     setIsLight(!isLight);
+  };
+
+  const brokerUrl = "ws://broker.hivemq.com:8000/mqtt"; // URL do broker MQTT
+  const options = {
+    clientId: `mqtt_${Math.random().toString(16).slice(2)}`,
+    keepalive: 60,
+    clean: true,
   };
 
   return (
@@ -24,8 +33,11 @@ const PaginaPrincipal = () => {
         </div>
 
         <div className="row">
-          <div className="col-3">
+          <div className="col-6">
             <Painel />
+          </div>
+          <div className="col-6">
+          <MqttConnector brokerUrl={brokerUrl} options={options} />
           </div>
         </div>
 
