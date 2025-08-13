@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PaginaPrincipal from './pages/PaginaPrincipal.jsx';
 
 function App() {
- 
   return (
     <>
      <BrowserRouter>
