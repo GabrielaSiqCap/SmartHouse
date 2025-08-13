@@ -39,8 +39,8 @@ const MqttConnector = ({ brokerUrl, options }) => {
   }, [client]);
 
   return (
-    <div>
-      <h4>Conexão e Status do broker MQTT.{status}</h4>
+    <div className='bg-warning rounded-5 p-5 h-100'>
+      <h4>Conexão e Status do broker MQTT: {status}</h4>
       {status === 'conectando' && <Spinner animation="border" />}
       {status === 'erro' && <Alert variant="danger">Erro ao conectar ao broker MQTT</Alert>}
       <Button onClick={mqttConnect} disabled={status === 'conectado'}>

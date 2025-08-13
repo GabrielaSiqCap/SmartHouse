@@ -33,11 +33,11 @@ const PaginaPrincipal = () => {
         </div>
 
         <div className="row">
-          <div className="col-6">
-            <Painel />
-          </div>
-          <div className="col-6">
+          <div className="col-6 p-5">
           <MqttConnector brokerUrl={brokerUrl} options={options} />
+          </div>
+          <div className="col-6 p-5">
+            <Painel />
           </div>
         </div>
 
