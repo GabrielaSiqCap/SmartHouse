@@ -6,3 +6,25 @@ body {
     color: #000000;
     min-height: 100vh;
   }
+
+
+  :root {
+    --bg-url: url(./img/bg-desktop.jpg);
+    --text-color: #fff;
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.5);
+    --switch-bg-url: url(./img/MoonStars.svg);
+    --highlight-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .light {
+    --bg-url: url(./img/bg-desktop-light.jpg);
+    --text-color: #000;
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.5);
+    --switch-bg-url: url(./img/Sun.svg);
+    --highlight-color: rgba(0, 0, 0, 0.2);
+  }
+
