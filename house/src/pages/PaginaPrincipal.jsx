@@ -3,6 +3,7 @@ import Caixacomodo from "../components/Caixacomodo.jsx";
 import Painel from "../components/Painel.jsx";
 import BotaoTroca from "../components/landd/BotaoTroca.jsx";
 import MqttConnector from "../components/MqttConnector.jsx";
+import Mensagens from "../components/Mensagens.jsx";
 
 
 const PaginaPrincipal = () => {
@@ -33,11 +34,14 @@ const PaginaPrincipal = () => {
         </div>
 
         <div className="row">
-          <div className="col-6 p-5">
+          <div className="col-4 p-5">
           <MqttConnector brokerUrl={brokerUrl} options={options} />
           </div>
-          <div className="col-6 p-5">
+          <div className="col-4 p-5">
             <Painel />
+          </div>
+          <div className="col-4 p-5">
+            <Mensagens />
           </div>
         </div>
 
