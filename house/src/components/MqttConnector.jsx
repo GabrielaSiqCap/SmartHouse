@@ -51,16 +51,16 @@ const MqttConnector = () => {
   }, [client]);
 
   return (
-    <div className='bg-pastel-teal-200 rounded-5 p-5 h-100'>
-      <h4>Conexão e Status do broker MQTT: {status}</h4>
+    <div className='bg-pastel-teal-200 rounded-5 p-5 h-100 text-center'>
+      <h4>Conexão e Status do broker MQTT: <br/>{status}</h4>
       {status === 'conectando' && <Spinner animation="border" />}
       {status === 'erro' && <Alert variant="danger">Erro ao conectar ao broker MQTT</Alert>}
 
-      <div className='d-flex justify-content-between gap-5 p-5'>
-        <Button onClick={mqttConnect} disabled={status === 'Conectado'}>
+      <div className='d-flex justify-content-between gap-3 p-4 mt-2 '>
+        <Button onClick={mqttConnect} disabled={status === 'conectado'}>
           Conectar
         </Button>
-        <Button onClick={mqttDisconnect} disabled={status !== 'Conectado'}>
+        <Button onClick={mqttDisconnect} disabled={status !== 'conectado'}>
           Desconectar
         </Button>
       </div>

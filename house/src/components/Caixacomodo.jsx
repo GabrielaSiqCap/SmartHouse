@@ -47,13 +47,13 @@ const Caixacomodo = (props) => {
         {props.nome}: {status1}
       </p>
       <button
-        className="btn btn-primary m-2"
+        className="btn btn-primary px-5 m-2"
         onClick={() => handleCommand1("ligar")}
       >
         {props.botao1}
       </button>
       <button
-        className="btn btn-secondary m-2"
+        className="btn btn-secondary px-5 m-2"
         onClick={() => handleCommand1("desligar")}
       >
         {props.botao2}
@@ -64,13 +64,13 @@ const Caixacomodo = (props) => {
         {props.nome2}: {status2}
       </p>
       <button
-        className="btn btn-primary m-2"
+        className="btn btn-primary px-5 m-2"
         onClick={() => handleCommand2("ligar")}
       >
         {props.botao3}
       </button>
       <button
-        className="btn btn-secondary m-2"
+        className="btn btn-secondary px-5 m-2"
         onClick={() => handleCommand2("desligar")}
       >
         {props.botao4}
@@ -81,13 +81,13 @@ const Caixacomodo = (props) => {
         {props.nome3}: {status3}
       </p>
       <button
-        className="btn btn-primary m-2"
+        className="btn btn-primary px-5 m-2"
         onClick={() => handleCommand3("ligar")}
       >
         {props.botao5}
       </button>
       <button
-        className="btn btn-secondary m-2"
+        className="btn btn-secondary px-5 m-2"
         onClick={() => handleCommand3("desligar")}
       >
         {props.botao6}
