@@ -3,8 +3,6 @@ import Caixacomodo from "../components/Caixacomodo.jsx";
 import Painel from "../components/Painel.jsx";
 import BotaoTroca from "../components/landd/BotaoTroca.jsx";
 import MqttConnector from "../components/MqttConnector.jsx";
-import Mensagens from "../components/Mensagens.jsx";
-
 
 const PaginaPrincipal = () => {
   const [isLight, setIsLight] = useState(true);
@@ -33,15 +31,12 @@ const PaginaPrincipal = () => {
           <BotaoTroca troca={troca} isLight={isLight} />
         </div>
 
-        <div className="row">
+        <div className="row justify-content-center">
           <div className="col-4 p-5">
-          <MqttConnector brokerUrl={brokerUrl} options={options} />
+            <MqttConnector brokerUrl={brokerUrl} options={options} />
           </div>
           <div className="col-4 p-5">
             <Painel />
-          </div>
-          <div className="col-4 p-5">
-            <Mensagens />
           </div>
         </div>
 
@@ -49,52 +44,79 @@ const PaginaPrincipal = () => {
           <div className="col-4">
             <Caixacomodo
               comodo="Garagem"
-              nome="Porta Social "
-              status="Aberta"
+
+              nome="Porta Social"
+              status="Fechada"
               botao1="Abrir"
               botao2="Fechar"
+              topicCommand1="casa/garagem/portao_social"
+              topicStatus1="casa/garagem/portao_social"
+
               nome2="Porta Basculante"
-              status2="Aberta"
+              status2="Fechada"
               botao3="Abrir"
               botao4="Fechar"
+              topicCommand2="casa/garagem/portao_basculante"
+              topicStatus2="casa/garagem/portao_basculante"
+
               nome3="Luz da Garagem"
-              status3="AC"
+              status3="Desligada"
               botao5="Ligar"
               botao6="Desligar"
+              topicCommand3="casa/garagem/luz"
+              topicStatus3="casa/garagem/luz"
             />
           </div>
           <div className="col-4">
             <Caixacomodo
               comodo="Sala de Estar"
+
               nome="Luz da Sala"
-              status="Aberta"
+              status="Acesa"
               botao1="Ligar"
               botao2="Desligar"
+              topicCommand1="casa/sala/luz"
+              topicStatus1="casa/sala/luz"
+
               nome2="Ar-condicionado"
-              status2="Aberta "
+              status2="Desligado"
               botao3="Ligar"
               botao4="Desligar"
+              topicCommand2="casa/sala/ar_condicionado"
+              topicStatus2="casa/sala/ar_condicionado"
+
               nome3="Umidificador"
-              status3="Ligada"
+              status3="Desligado"
               botao5="Ligar"
               botao6="Desligar"
+              topicCommand3="casa/sala/umidificador"
+              topicStatus3="casa/sala/umidificador"
             />
           </div>
           <div className="col-4">
             <Caixacomodo
               comodo="Quarto"
+
               nome="Luz do Quarto"
-              status="Aberta "
+              status="Desligada"
               botao1="Ligar"
               botao2="Desligar"
+              topicCommand1="casa/quarto/luz"
+              topicStatus1="casa/quarto/luz"
+
               nome2="Tomada Inteligente"
-              status2="Aberta "
+              status2="Desligada"
               botao3="Ligar"
               botao4="Desligar"
+              topicCommand2="casa/quarto/tomada"
+              topicStatus2="casa/quarto/tomada"
+
               nome3="Cortina"
-              status3="Ligada"
+              status3="Fechada"
               botao5="Abrir"
               botao6="Fechar"
+              topicCommand3="casa/quarto/cortina"
+              topicStatus3="casa/quarto/cortina"
             />
           </div>
         </div>
