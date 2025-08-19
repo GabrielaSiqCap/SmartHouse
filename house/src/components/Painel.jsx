@@ -32,7 +32,7 @@ const Painel = () => {
   }, []);
 
   return (
-    <div className="bg-warning rounded-5 p-5 h-100 ">
+    <div className="bg-pastel-teal-200 rounded-5 p-5 h-100 ">
       <h4>Dados em tempo real:</h4>
       <ItensPainel item="Temperatura" status={temperatura} />
       <ItensPainel item="Umidade" status={umidade} />

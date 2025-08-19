@@ -39,7 +39,7 @@ const Caixacomodo = (props) => {
   };
 
   return (
-    <div className="bg-warning rounded-5 p-4 justify-content-center text-center">
+    <div className="bg-pastel-teal-300 rounded-5 p-4 justify-content-center text-center">
       <h4>{props.comodo}</h4>
 
       {/* Controle do dispositivo 1 */}
